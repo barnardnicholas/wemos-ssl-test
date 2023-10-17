@@ -1,8 +1,0 @@
-{
-  "parent": "/Bases/nm1",
-  "data": {
-    "type": "comand",
-    "version": "1.0",
-    "contents": [{ "Type": "Noise", "Min": 0, "Max": 70, "DeviceID": "nick2" }]
-  }
-}

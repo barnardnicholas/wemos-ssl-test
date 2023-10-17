@@ -21,16 +21,7 @@
 #include <ArduinoJson.hpp>
 #include "math.h"
 #include "certs.h"
-
-#ifndef STASSID
-#define STASSID "VIRGIN788"
-#define STAPSK "A1DA257EF95D"
-#endif
-
-const char* ssid = STASSID;
-const char* password = STAPSK;
-
-const char* token = "Token TpQXr0DTTz6f8pvZHloDa1PX5G1c2Flg";
+#include "secret.h"
 
 X509List cert(cert_ISRG_Root_X1);
 
