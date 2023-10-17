@@ -1,0 +1,68 @@
+{
+  "type": "COMAND",
+  "version": "1.0",
+  "time": "2023-10-17T11:26:40-04:00",
+  "source": "https://noisemeter.webcomand.com/ws/put",
+  "request": "",
+  "status": false,
+  "title": "Put Service",
+  "description": "Create and/or update one or more objects in the repository.  The desired parent container (object and field) can be specified using the parent option.",
+  "log": [
+    {
+      "timestamp": "2023-10-17 11:26:40",
+      "type": "Error",
+      "message": "Parameter 'data' is required."
+    }
+  ],
+  "help": {
+    "version": "candidate-3.8.0",
+    "service": {
+      "Identifier": "put",
+      "Title": "Put Service",
+      "Description": "Create and/or update one or more objects in the repository.  The desired parent container (object and field) can be specified using the parent option.",
+      "Methods": [
+        {
+          "Identifier": "put",
+          "Title": null,
+          "Description": "Updates the repository with the objects specified in the data sent to this service.",
+          "Parameters": [
+            {
+              "Identifier": "data",
+              "Title": "Data",
+              "Description": "Data to create or update in the repository. Currently this only supports JSON-formatted data as returned from the 'get' web service.",
+              "Type": "DeveloperTextBox",
+              "Required": true
+            },
+            {
+              "Identifier": "saveMethod",
+              "Title": "Save Method",
+              "Description": "The method to use to create/update each object.  \"approve\" is the default and will cause the active/approved version of the object to be updated. \"save\" will cause a new draft version of the content to be added.  \"store\" will update the working copy version of the content.  An error will be returned if the user is not authorized to create or update the specified object and/or version.",
+              "Type": "TextLine",
+              "DefaultValue": "approve",
+              "AllowedValues": ["approve", "save", "store"]
+            },
+            {
+              "Identifier": "parent",
+              "Title": "Parent",
+              "Description": "Optional OID, UUID, cPath or cQL query to specify the parent collection the new object(s) should be created under.",
+              "Type": "TextLine"
+            },
+            {
+              "Identifier": "select",
+              "Title": "Select",
+              "Description": "Optional 'select' clause of comma-separated fields to return for each imported object.",
+              "Type": "TextLine"
+            },
+            {
+              "Identifier": "versionNotes",
+              "Title": "Version Notes",
+              "Description": "Optional version notes to add to the approved objects.",
+              "Type": "TextLine"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "contents": null
+}
